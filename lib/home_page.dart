@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gada_electronics/global_variables.dart';
+import 'package:gada_electronics/product_card.dart';
+import 'package:gada_electronics/product_details_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,6 +16,8 @@ class _HomePageState extends State<HomePage> {
     "Phone",
     "Laptop",
     "Television",
+    "Watch",
+    "Buds"
   ];
   late String selectedFilter;
 
@@ -36,16 +41,16 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Column(
           children: [
-            const Row(
+            Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: Text(
                     "Gada\nElectronics",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: TextField(
                     decoration: InputDecoration(
                       hintText: "Search",
@@ -88,6 +93,33 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(30),
                         ),
                       ),
+                    ),
+                  );
+                },
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: products.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final product = products[index];
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return ProductDetailsPage(product: product);
+                          },
+                        ),
+                      );
+                    },
+                    child: ProductCard(
+                      title: product['title'] as String,
+                      price: product['price'] as int,
+                      image: product['imageUrl'] as String,
+                      backgroudColor: index.isEven
+                          ? const Color.fromRGBO(216, 240, 253, 1)
+                          : const Color.fromRGBO(245, 247, 249, 1),
                     ),
                   );
                 },
