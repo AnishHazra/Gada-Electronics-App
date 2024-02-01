@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gada_electronics/pages/intro_screen_page.dart';
 import 'package:gada_electronics/providers/cart_provider.dart';
 import 'package:gada_electronics/pages/home_page.dart';
 import 'package:provider/provider.dart';
@@ -17,6 +18,10 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: "Gada Electronics",
+        routes: {
+          "/": (context) => const IntroScreen(),
+          "home": (context) => const HomePage(),
+        },
         theme: ThemeData(
           fontFamily: 'Lato',
           colorScheme: ColorScheme.fromSeed(
@@ -46,7 +51,6 @@ class MyApp extends StatelessWidget {
           ),
           useMaterial3: true,
         ),
-        home: const HomePage(),
       ),
     );
   }
