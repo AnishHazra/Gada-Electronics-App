@@ -22,7 +22,50 @@ class CartPage extends StatelessWidget {
               radius: 30,
             ),
             trailing: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text(
+                          "Delete Product",
+                          style: Theme.of(context).textTheme.titleMedium,
+                        ),
+                        content: const Text(
+                          "Do you want to remove the product from your cart?",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.normal),
+                        ),
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: const Text(
+                              "No",
+                              style: TextStyle(
+                                  color: Colors.blue,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Provider.of<CartProvider>(context, listen: false)
+                                  .removeProduct(cartItem);
+                              Navigator.of(context).pop();
+                            },
+                            child: const Text(
+                              "Yes",
+                              style: TextStyle(
+                                  color: Colors.red,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ],
+                      );
+                    });
+              },
               icon: const Icon(
                 Icons.delete,
                 color: Colors.red,
