@@ -6,9 +6,9 @@ final products = [
     'company': 'Apple'
   },
   {
-    'title': 'MacBook Air',
+    'title': 'MacBook Pro 16-Inch',
     'price': 120000,
-    'imageUrl': 'assets/images/MacBook-Air.jpg',
+    'imageUrl': 'assets/images/mbp16-gray.png',
     'company': 'Apple'
   },
   {
@@ -26,23 +26,13 @@ final products = [
   {
     'title': 'Sony Headphone',
     'price': 15000,
-    'imageUrl': 'assets/images/sonyheadphone.png',
+    'imageUrl': 'assets/images/headphones.png',
     'company': 'Sony'
   },
   {
     'title': 'Noise Earbuds',
-    'price': 5000,
+    'price': 2000,
     'imageUrl': 'assets/images/Airbuds.png',
     'company': 'Noise'
   },
-];
-
-final cart = [
-  {
-    'id': '3',
-    'title': 'Iphone 15 Pro',
-    'price': 110000,
-    'imageUrl': 'assets/Apple-iphone-15-pro.png',
-    'company': 'Iphone'
-  }
 ];

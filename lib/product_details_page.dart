@@ -1,12 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:gada_electronics/cart_provider.dart';
+import 'package:provider/provider.dart';
 
-class ProductDetailsPage extends StatelessWidget {
+class ProductDetailsPage extends StatefulWidget {
   final Map<String, Object> product;
 
   const ProductDetailsPage({
     super.key,
     required this.product,
   });
+
+  @override
+  State<ProductDetailsPage> createState() => _ProductDetailsPageState();
+}
+
+class _ProductDetailsPageState extends State<ProductDetailsPage> {
+  void onTap() {
+    Provider.of<CartProvider>(context, listen: false)
+        .addProduct(widget.product);
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text("Product added Successfully!"),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,11 +34,11 @@ class ProductDetailsPage extends StatelessWidget {
       body: Column(
         children: [
           Text(
-            product['title'] as String,
+            widget.product['title'] as String,
             style: Theme.of(context).textTheme.titleLarge,
           ),
           const Spacer(),
-          Image.asset(product['imageUrl'] as String),
+          Image.asset(widget.product['imageUrl'] as String),
           const Spacer(
             flex: 2,
           ),
@@ -36,13 +53,13 @@ class ProductDetailsPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "${product["price"]}₹",
+                  "${widget.product["price"]}₹",
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: ElevatedButton.icon(
-                    onPressed: () {},
+                    onPressed: onTap,
                     icon: const Icon(
                       Icons.shopping_cart_outlined,
                       color: Colors.black,

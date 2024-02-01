@@ -34,7 +34,7 @@ class ProductCard extends StatelessWidget {
             height: 5,
           ),
           Text(
-            '\$$price',
+            '$price ₹',
             style: Theme.of(context).textTheme.titleSmall,
           ),
           const SizedBox(
