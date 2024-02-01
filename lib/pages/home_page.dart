@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gada_electronics/cart_page.dart';
-import 'package:gada_electronics/product_list.dart';
+import 'package:gada_electronics/pages/cart_page.dart';
+import 'package:gada_electronics/pages/product_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

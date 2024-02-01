@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gada_electronics/cart_provider.dart';
-import 'package:gada_electronics/home_page.dart';
+import 'package:gada_electronics/providers/cart_provider.dart';
+import 'package:gada_electronics/pages/home_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {

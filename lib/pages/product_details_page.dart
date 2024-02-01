@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gada_electronics/cart_provider.dart';
+import 'package:gada_electronics/providers/cart_provider.dart';
 import 'package:provider/provider.dart';
 
 class ProductDetailsPage extends StatefulWidget {
@@ -38,7 +38,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
             style: Theme.of(context).textTheme.titleLarge,
           ),
           const Spacer(),
-          Image.asset(widget.product['imageUrl'] as String),
+          Image.asset(
+            widget.product['imageUrl'] as String,
+            height: 250,
+          ),
           const Spacer(
             flex: 2,
           ),
@@ -70,10 +73,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                     ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Theme.of(context).colorScheme.primary,
-                      minimumSize: const Size(
-                        double.infinity,
-                        50,
-                      ),
+                      fixedSize: const Size(350, 50),
                     ),
                   ),
                 ),
