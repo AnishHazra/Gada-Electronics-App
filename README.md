@@ -18,6 +18,15 @@ Transformed the offline store into a dynamic online ecommerce app using Flutter 
 - **Flutter**: Front-end framework for building cross-platform mobile applications.
 - **Provider**: State management library for Flutter applications.
 
+## Screenshots
+
+
+![image 1](https://github.com/AnishHazra/Gada-Electronics-App/assets/121759157/48fce7db-f679-4533-ae90-6e7d56749133)
+![image 2](https://github.com/AnishHazra/Gada-Electronics-App/assets/121759157/f12b4d14-8ecb-4806-9add-06f721c98093)
+![image 3](https://github.com/AnishHazra/Gada-Electronics-App/assets/121759157/0edf513b-1a37-431c-90dc-26a065fdfb4f)
+![image 4](https://github.com/AnishHazra/Gada-Electronics-App/assets/121759157/fd455ba3-0e3e-4919-9b2e-fa713ab35580)
+
+
 ## Getting Started
 
 1. Clone the repository.
