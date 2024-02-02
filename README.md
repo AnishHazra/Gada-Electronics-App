@@ -19,19 +19,16 @@ Transformed the offline store into a dynamic online ecommerce app using Flutter 
 - **Provider**: State management library for Flutter applications.
 
 ## Screenshots
-
-
-![image 1](https://github.com/AnishHazra/Gada-Electronics-App/assets/121759157/48fce7db-f679-4533-ae90-6e7d56749133)
-![image 2](https://github.com/AnishHazra/Gada-Electronics-App/assets/121759157/f12b4d14-8ecb-4806-9add-06f721c98093)
-![image 3](https://github.com/AnishHazra/Gada-Electronics-App/assets/121759157/0edf513b-1a37-431c-90dc-26a065fdfb4f)
-![image 4](https://github.com/AnishHazra/Gada-Electronics-App/assets/121759157/fd455ba3-0e3e-4919-9b2e-fa713ab35580)
-
+![image 1](https://github.com/AnishHazra/Gada-Electronics-App/assets/121759157/b3711352-4706-4009-a770-10345699189b)
+![image 2](https://github.com/AnishHazra/Gada-Electronics-App/assets/121759157/8a670029-762e-4665-b1b9-c6d6fb76e419)
+![image 3](https://github.com/AnishHazra/Gada-Electronics-App/assets/121759157/b8da9443-9464-4e21-9b51-b67c8a2cc701)
+![image 4](https://github.com/AnishHazra/Gada-Electronics-App/assets/121759157/69b58725-cf76-431c-aa81-0ae70024cbf5)
 
 ## Getting Started
 
 1. Clone the repository.
    ```bash
-   git clone https://github.com/your-username/GadaElectronicsApp.git
+   git clone https://github.com/AnishHazra/Gada-Electronics-App.git
 
 2. Navigate to the project directory.
    ```bash
